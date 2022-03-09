@@ -1,0 +1,32 @@
+package pestoreproject.pestoreapp;
+
+public class CustomerService {
+	
+	private String serviceHelplineNumber;
+	private String councellorName;
+	public String getServiceHelplineNumber() {
+		return serviceHelplineNumber;
+	}
+	public String getCouncellorName() {
+		return councellorName;
+	}
+	private CustomerService(String serviceHelplineNumber, String councellorName) {
+		super();
+		this.serviceHelplineNumber = "+916765542";
+		this.councellorName = "+91765432";
+	}
+	
+	
+	public CustomerService() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	private static CustomerService customerService= new CustomerService();
+	public static CustomerService createCustomerServiceInstance(){
+		return customerService;
+	}
+	
+
+}

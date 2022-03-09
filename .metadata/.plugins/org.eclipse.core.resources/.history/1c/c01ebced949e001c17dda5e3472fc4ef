@@ -1,0 +1,14 @@
+package onlineshoppingproject.onlineshoppingapp;
+
+import java.util.List;
+
+public class Order {
+	
+	List<Cart> cartList;
+	
+	
+	public List<Cart> getCartList(){
+		
+	}
+
+}

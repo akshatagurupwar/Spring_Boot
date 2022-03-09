@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+
+<bean id="employee" class="employeetaskproject.employeetasksystem.Employee">
+<property name="employeeid" value="101"/>
+<property name="employee_name" value="Akshata"/>
+<property name="department" value="IT"/>
+<property name="designation" value="Analyst"/>
+<property name="password" value="Akshata@7"/>
+<property name="tasklist">
+<list>
+<ref bean=""/>
+</list>
+</property>
+<property name="attendance_list">
+<list>
+<ref bean=""/>
+</list>
+</property>
+<property name="rating" value="Rating.GOOD"/>
+</bean>
+
+
+<bean id="task" class="employeetaskproject.employeetasksystem.Task">
+<property name="taskname" value="Attendance record"/>
+<property name="task_description" value="Sort the students depends on their attendance"/>
+<property name="date_of_allocation" value="09/03/2022 09:00:00"/>
+<property name="deadline" value="14/03/2022 5:00:00"/>
+<property name="allocated_to" value="Akshata"/>
+
+</bean>
+
+
+<bean id=>
+
+</beans>

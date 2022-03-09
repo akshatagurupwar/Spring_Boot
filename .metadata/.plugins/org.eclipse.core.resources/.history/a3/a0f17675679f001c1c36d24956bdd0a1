@@ -1,0 +1,42 @@
+package employeetaskproject.employeetasksystem;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context=new ClassPathXmlApplicationContext("Springbeans.xml");
+    	
+    	Employee employee=context.getBean("employee",Employee.class);
+    	
+    	System.out.println(employee.getEmployeeid());
+    	System.out.println(employee.getEmployee_name());
+    	System.out.println(employee.getDepartment());
+    	System.out.println(employee.getDesignation());
+    	System.out.println(employee.getPassword());
+    	List<Task> tasklist=employee.getTasklist();
+    	
+    	for(Task t:tasklist){
+    		System.out.println(t.getTaskname());
+    		System.out.println(t.getTask_description());
+    		System.out.println(t.getDate_of_allocation());
+    		System.out.println(t.getDeadline());
+    		System.out.println(t.getAllocated_to());
+        }
+    	
+
+
+
+
+
+    	
+    }
+}

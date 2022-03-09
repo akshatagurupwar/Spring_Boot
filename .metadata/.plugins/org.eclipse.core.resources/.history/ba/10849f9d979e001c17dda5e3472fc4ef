@@ -1,0 +1,10 @@
+package onlineshoppingproject.onlineshoppingapp;
+
+import java.util.List;
+
+public class Cart {
+	List<Product> productList;
+	private float total_amount;
+	
+
+}

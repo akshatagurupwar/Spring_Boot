@@ -1,0 +1,38 @@
+package employeetaskproject.employeetasksystem;
+
+public class Attendance {
+    private int taskid;
+    private String taskname;
+    private String task_description;
+	public int getTaskid() {
+		return taskid;
+	}
+	public void setTaskid(int taskid) {
+		this.taskid = taskid;
+	}
+	public String getTaskname() {
+		return taskname;
+	}
+	public void setTaskname(String taskname) {
+		this.taskname = taskname;
+	}
+	public String getTask_description() {
+		return task_description;
+	}
+	public void setTask_description(String task_description) {
+		this.task_description = task_description;
+	}
+	public Attendance(int taskid, String taskname, String task_description) {
+		super();
+		this.taskid = taskid;
+		this.taskname = taskname;
+		this.task_description = task_description;
+	}
+	public Attendance() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
+    
+
+}

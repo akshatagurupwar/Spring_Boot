@@ -1,0 +1,18 @@
+package employeetaskproject.employeetasksystem;
+
+import java.util.List;
+
+public class Employee {
+	
+	private int employeeid;
+	private String employee_name;
+	private String department;
+	private String designation;
+	private String password;
+	
+	private List<Task> tasklist;
+	
+	private List<Attendance> attendance_list;
+	private Rating employee_rating;
+
+}

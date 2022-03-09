@@ -1,0 +1,11 @@
+package employeetaskproject.employeetasksystem;
+
+public class Attendance {
+    private int taskid;
+    private String taskname;
+    private String task_description;
+    private datetime date_of_allocation;
+    
+    
+
+}

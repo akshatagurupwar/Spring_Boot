@@ -1,0 +1,11 @@
+package petstoregradleproject;
+
+public class ApplicationConfiguration {
+
+	public Person getPerson(){
+		Person obj=new Person();
+		obj.setPersonName("Herry Poter");
+		obj.setAge(23);
+		return obj;
+	}
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+
+<bean id="employee" class="employeetaskproject.employeetasksystem.Employee">
+<property name="employeeid" value="101"/>
+<property name="employee_name" value="Akshata Gurupwar"/>
+<property name="department" value="IT"/>
+<property name="designation" value="Analyst"/>
+<property name="password" value="Akshata@7"/>
+<property name="superior" ref="employee1"/>
+
+<property name="tasklist">
+<list>
+<ref bean="task1"/>
+<ref bean="task2"/>
+
+</list>
+</property>
+
+<property name="attendance_list">
+<list>
+<ref bean="Attendance1"/>
+<ref bean="Attendance2"/>
+
+</list>
+</property>
+
+<property name="employee_rating" value="GOOD"/>
+</bean>
+
+<bean id="employee1" class="employeetaskproject.employeetasksystem.Employee">
+<property name="employeeid" value="102"/>
+<property name="employee_name" value="Sakshi Shah"/>
+<property name="department" value="Development"/>
+<property name="designation" value="Team Lead"/>
+<property name="password" value="Skashi@56"/>
+</bean>
+
+
+
+
+
+
+<bean id="task1" class="employeetaskproject.employeetasksystem.Task">
+<property name="task_id" value="121"/>
+
+<property name="taskname" value="Attendance record"/>
+<property name="task_description" value="Sort the students depends on their attendance"/>
+<property name="date_of_allocation" value="09/03/2022 09:00:00"/>
+<property name="deadline" value="14/03/2022 5:00:00"/>
+<property name="allocated_to" ref="employee"/>
+
+</bean>
+
+
+<bean id="task2" class="employeetaskproject.employeetasksystem.Task">
+<property name="task_id" value="131"/>
+
+<property name="taskname" value="Paper Checking"/>
+<property name="task_description" value="Checking of paper"/>
+<property name="date_of_allocation" value="25/02/2022 11:00:00"/>
+<property name="deadline" value="2/03/2022 5:00:00"/>
+<property name="allocated_to" ref="employee"/>
+
+</bean>
+
+<bean id="Attendance1" class="employeetaskproject.employeetasksystem.Attendance">
+<property name="attendance_id" value="201"/>
+<property name="attendance_date" value="08/03/2022 10:00:00"/>
+<property name="status" value="PRESENT"/>
+</bean>
+
+<bean id="Attendance2" class="employeetaskproject.employeetasksystem.Attendance">
+<property name="attendance_id" value="231"/>
+<property name="attendance_date" value="04/03/2022 10:00:00"/>
+<property name="status" value="LEAVE"/>
+</bean>
+
+
+
+
+
+
+</beans>

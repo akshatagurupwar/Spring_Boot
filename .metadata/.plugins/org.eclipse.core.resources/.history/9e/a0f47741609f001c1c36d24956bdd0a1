@@ -1,0 +1,17 @@
+package employeetaskproject.employeetasksystem;
+import java.util.*;
+public class Task {
+	private String taskname;
+	private String task_description;
+	private date_time date_of_allocation;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

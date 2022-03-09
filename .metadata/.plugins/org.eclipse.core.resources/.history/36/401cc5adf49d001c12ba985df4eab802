@@ -1,0 +1,27 @@
+package petstoregradleproject;
+
+public class Payment {
+	private float amount;
+	private Person person;
+	public Payment(float amount, Person person) {
+		super();
+		this.amount = amount;
+		this.person = person;
+	}
+	public float getAmount() {
+		return amount;
+	}
+	public void setAmount(float amount) {
+		this.amount = amount;
+	}
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	
+	
+	
+
+}

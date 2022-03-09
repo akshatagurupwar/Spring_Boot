@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+<bean id="petStore" class="pestoreproject.pestoreapp.PetStore">
+<property name="storeName" value="Happy Pet Store"/>
+<property name="address" value="23 baker Street"/>
+
+</bean>
+
+<bean id="petService" class="pestoreproject.pestoreapp.PetService">
+<constructor-arg ref="petStore"/>
+<property name="champlist">
+<list>
+<ref bean="champ1"/>
+<ref bean="champ2"/>
+</list>
+
+</property>
+</bean>
+
+
+<bean id="petFood" class="pestoreproject.pestoreapp.PetFood">
+<constructor-arg type="java.lang.String" value="Orange pet nutrition"/>
+<constructor-arg type="int" value="2"/>
+<constructor-arg type="int" value="3"/>
+</bean>
+
+<bean id="customerService" class="pestoreproject.pestoreapp.CustomerService" factory-method="createCustomerServiceInstance"/>
+
+
+
+
+
+
+
+<bean id="champ1" class="pestoreproject.pestoreapp.RescueChamp">
+<constructor-arg type="java.lang.String" value="Anant"/>
+<constructor-arg type="int" value="3"/>
+</bean>
+
+<bean id="champ2" class="pestoreproject.pestoreapp.RescueChamp">
+<constructor-arg type="java.lang.String" value="Pratik"/>
+<constructor-arg type="int" value="5"/>
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+<bean id="user" class="onlineshoppingproject.onlineshoppingapp.User">
+<property name="username" value="James"/>
+<property name="email" value="james@gmail.com"/>
+<property name="password" value="jame@2"/>
+<property name="shipping_address" value="23 parker side"/>
+<property name="billing_address" value="23 baker street"/>
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

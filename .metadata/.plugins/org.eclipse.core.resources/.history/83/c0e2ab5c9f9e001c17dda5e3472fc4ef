@@ -1,0 +1,26 @@
+package onlineshoppingproject.onlineshoppingapp;
+
+import java.util.List;
+
+public class Cart {
+	List<Product> productList;
+	public Cart() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public List<Product> getProductList() {
+		return productList;
+	}
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+	public float getTotal_amount() {
+		return total_amount;
+	}
+	public void setTotal_amount(float total_amount) {
+		this.total_amount = total_amount;
+	}
+	private float total_amount;
+	
+
+}

@@ -1,0 +1,17 @@
+package petstoregradleproject;
+
+public class Person {
+	private String personName;
+
+	public Person(String personName) {
+		this.personName = personName;
+	}
+	
+	public Person(){
+		
+	}
+	public String getPersonName(){
+		return personName;
+	}
+
+}

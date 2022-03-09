@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> 
+
+<bean id="user" class="onlineshoppingproject.onlineshoppingapp.User">
+<property name="username" value="James"/>
+<property name="email" value="james@gmail.com"/>
+<property name="password" value="jame@2"/>
+<property name="shipping_address" value="23 parker side"/>
+<property name="billing_address" value="23 baker street"/>
+</bean>
+
+
+<bean id="product1" class="onlineshoppingproject.onlineshoppingapp.Product">
+<property name="product_name" value="mobile"/>
+<property name="price" value="5353.0"/>
+<property name="quality_in" value="6"/>
+<property name="imagelocation" value="45 baker street"/>
+
+</bean>
+
+
+<bean id="product2" class="onlineshoppingproject.onlineshoppingapp.Product">
+<property name="product_name" value="Laptop"/>
+<property name="price" value="40000"/>
+<property name="quality_in" value="4"/>
+<property name="imagelocation" value="12 baker street"/>
+
+</bean>
+
+<bean id="product3" class="onlineshoppingproject.onlineshoppingapp.Product">
+<property name="product_name" value="tab"/>
+<property name="price" value="8000.0"/>
+<property name="quality_in" value="8"/>
+<property name="imagelocation" value="67 baker street"/>
+
+</bean>
+
+
+<bean id="product4" class="onlineshoppingproject.onlineshoppingapp.Product">
+<property name="product_name" value="earphone"/>
+<property name="price" value="2500.0"/>
+<property name="quality_in" value="2"/>
+<property name="imagelocation" value="45 baker street"/>
+</bean>
+
+
+
+
+<bean id="cart1" class="onlineshoppingproject.onlineshoppingapp.Cart">
+<constructor-arg ref="user"/>
+
+<property name="productList">
+<list>
+<ref bean="product1"/>
+<ref bean="product2"/>
+<ref bean="product3"/>
+</list>
+</property>
+</bean>
+
+
+<bean id="cart2" class="onlineshoppingproject.onlineshoppingapp.Cart">
+<constructor-arg ref="user"/>
+
+<property name="productList">
+<list>
+<ref bean="product2"/>
+<ref bean="product3"/>
+</list>
+</property>
+
+</bean>
+
+<bean id="order" class="onlineshoppingproject.onlineshoppingapp.Order">
+<property name="cartList">
+<list>
+<ref bean="cart1"/>
+<ref bean="cart2"/>
+</list>
+</property>
+</bean>
+</beans>
